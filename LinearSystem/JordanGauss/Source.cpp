@@ -223,7 +223,7 @@ int main()
 
 
 	}
-	printf("det(A) =");
+	printf("det(A) = ");
 	printf("%6.2f\n\n", det);
 	printf("A^(-1) = \n");
 	showMatrix(E, n, n);
