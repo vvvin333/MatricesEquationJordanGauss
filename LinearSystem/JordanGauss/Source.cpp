@@ -12,7 +12,7 @@ using namespace std;
 /// <param name="matr">given matrix</param>
 /// <param name="n"></param>
 /// <param name="m"></param>
-void fillingMatrixRandom(float** matr, int n, int m)//заполение матриц А и В рандомными числами
+void fillingMatrixRandom(float** matr, int n, int m)//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -25,7 +25,7 @@ void fillingMatrixRandom(float** matr, int n, int m)//заполение матриц А и В ран
 
 void customFilling(float** matr, int n, char matrixName)
 {
-	printf("Введите матрицу %c :\n", matrixName);
+	printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ %c :\n", matrixName);
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -36,14 +36,14 @@ void customFilling(float** matr, int n, char matrixName)
 	}
 }
 
-void fillingMatrixCopy(float** matr, float** matr1, int n, int m) //копии матриц(заполнение)
+void fillingMatrixCopy(float** matr, float** matr1, int n, int m) //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ(пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
 {
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < m; j++)
 			matr1[i][j] = matr[i][j];
 }
 
-void showMatrix(float** matr, int n, int m)//вывод матрицы 
+void showMatrix(float** matr, int n, int m)//пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -56,10 +56,10 @@ void showMatrix(float** matr, int n, int m)//вывод матрицы
 	printf("\n");
 }
 
-float** determinantAndChange(float** A, float** E, int n)//определитель и преобразования
+float** determinantAndChange(float** A, float** E, int n)//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 {
 	bool flag = true;
-	for (int i = 0; i < n; i++) //проверка на нулевые столбцы
+	for (int i = 0; i < n; i++) //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	{
 		flag = true;
 		for (int j = 0; j < n; j++)
@@ -69,11 +69,11 @@ float** determinantAndChange(float** A, float** E, int n)//определитель и преобр
 		}
 		if (flag)
 		{
-			printf("Матрица вырожденная, определитель равен 0!");
+			printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 0!");
 			return 0;
 		}
 	}
-	float det = 1; //преобразование А и вычисление определителя
+	float det = 1; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	for (int i = 0; i < n; i++)
 	{
 		int imax = i;
@@ -84,7 +84,7 @@ float** determinantAndChange(float** A, float** E, int n)//определитель и преобр
 		float eps = 0.0001;
 		if (fabs(A[imax][i]) < eps)
 		{
-			printf("Матрица вырожденная, определитель равен 0!");
+			printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 0!");
 			return 0;
 		}
 		if (i != imax)
@@ -125,10 +125,10 @@ float** determinantAndChange(float** A, float** E, int n)//определитель и преобр
 
 }
 
-float** multiplicationMatrix(float** matr1, int n1, int m1, float** matr2, int n2, int m2) //умножение матриц
+float** multiplicationMatrix(float** matr1, int n1, int m1, float** matr2, int n2, int m2) //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 {
 	if (m1 != n2)
-		printf("Ошибка! умножение невозможно!");
+		printf("пїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
 	else
 	{
 		float** s = new float* [n1];
@@ -151,10 +151,10 @@ float** multiplicationMatrix(float** matr1, int n1, int m1, float** matr2, int n
 
 }
 
-void sumMatrix(float** matr1, int n1, int m1, float** matr2, int n2, int m2)// сложение матриц
+void sumMatrix(float** matr1, int n1, int m1, float** matr2, int n2, int m2)// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 {
 	if ((n1 != n2) || (m1 != m2))
-		printf("Ошибка!Размеры матриц не совпадают!");
+		printf("пїЅпїЅпїЅпїЅпїЅпїЅ!пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
 	else
 	{
 		float** sum = new float* [n1];
@@ -184,44 +184,44 @@ int main()
 	setlocale(LC_ALL, "rus");
 	srand(time(NULL));
 	int n, m, chooseA, chooseB;
-	printf("Введите размерность матрицы A: ->");
+	printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ A: ->");
 	scanf_s("%d", &n);
 	printf("%d\n", n);
-	printf("Задать значения элементов матрицы А вручную (1) или случайным образом (2)? ->");
+	printf("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (1) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (2)? ->");
 	scanf_s("%d", &chooseA);
 	printf("%d\n", chooseA);
-	printf("Введите количество столбцов матрицы B: ->");
+	printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ B: ->");
 	scanf_s("%d", &m);
 	printf("%d\n", m);
-	printf("Задать значения элементов матрицы B вручную (1) или случайным образом (2)? ->");
+	printf("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ B пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (1) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (2)? ->");
 	scanf_s("%d", &chooseB);
 	printf("%d\n", chooseB);
 	if (((chooseA != 1) && (chooseA != 2)) || ((chooseB != 1) && (chooseB != 2)))
 	{
-		printf("Ошибка! Попробуйте еще раз.");
+		printf("пїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ.");
 		return 0;
 	}
-	float** A = new float* [n];//создание А
+	float** A = new float* [n];//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ
 	for (int i = 0; i < n; i++)
 		A[i] = new float[n];
-	float** cA = new float* [n];// копия А
+	float** cA = new float* [n];// пїЅпїЅпїЅпїЅпїЅ пїЅ
 	for (int i = 0; i < n; i++)
 		cA[i] = new float[n];
 
-	float** B = new float* [n];// создание В
+	float** B = new float* [n];// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ
 	for (int i = 0; i < n; i++)
 		B[i] = new float[m];
-	float** cB = new float* [n];//копия В
+	float** cB = new float* [n];//пїЅпїЅпїЅпїЅпїЅ пїЅ
 	for (int i = 0; i < n; i++)
 		cB[i] = new float[m];
-	float** X = new float* [n];// создание X
+	float** X = new float* [n];// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ X
 	for (int i = 0; i < n; i++)
 		X[i] = new float[m];
-	float** T = new float* [n];// создание T
+	float** T = new float* [n];// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ T
 	for (int i = 0; i < n; i++)
 		T[i] = new float[m];
 
-	float** E = new float* [n];// создание Единичной
+	float** E = new float* [n];// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	for (int i = 0; i < n; i++)
 	{
 		E[i] = new float[n];
@@ -252,9 +252,9 @@ int main()
 	}
 	fillingMatrixCopy(A, cA, n, n);
 	fillingMatrixCopy(B, cB, n, m);
-	printf("матрица A =\n");
+	printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ A =\n");
 	showMatrix(cA, n, n);
-	printf("матрица B =\n");
+	printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ B =\n");
 	showMatrix(cB, n, m);
 	printf("det(A) =");
 	determinantAndChange(A, E, n);
@@ -264,7 +264,7 @@ int main()
 	printf("X=\n");
 	X = multiplicationMatrix(E, n, n, B, n, m);
 	showMatrix(X, n, m);
-	printf("Проверка:\n\n");
+	printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n\n");
 	printf("A*X =\n");
 	showMatrix(multiplicationMatrix(cA, n, n, X, n, m), n, m);
 	printf("A*X - B =\n");
